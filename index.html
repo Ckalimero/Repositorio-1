@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+<body>
+<script>
+    function funcionPrincipal(callback1,
+callback2, callback3){
+//código de la función principal
+callback1();
+//más código de la función
+principal
+callback2();
+//más código de la función
+principal
+callback3();
+//más código si fuera necesario
+}
+funcionPrincipal(
+    function(){
+    alert('primer callback');
+    },
+    function(){
+    alert('segundo callback');
+    },
+    function(){
+    alert('tercer callback');
+    }
+)
+</script>
+</body>
+</html>
