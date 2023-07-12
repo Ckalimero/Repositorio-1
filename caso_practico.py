@@ -20,22 +20,23 @@ def suma_filas(n): #funcion suma listas y columnas, sin usar funcion sum(), ni t
     lfila=[]
     sfila=0
     while x<=(n-1):
-        for i in range(len(matriz[x])):
-            sfila+=matriz[x][i]
-        lfila.append(sfila)            
+        for i in range(len(matriz[x])):#Extraigo la fila
+            sfila+=matriz[x][i]        #la sumo
+        lfila.append(sfila)            #la añado a una lista que luego imprimo
         x+=1
         sfila=0
     print("La suma de cada fila es: ",lfila)
 
+# funcion que extrae columnas con una lista por comprensión, las mete en otra lista y luego las suma e imprime
 def suma_columna(numero):
     lcolumna=[]
     for i in range(len(matriz)):
         x=[fila[i] for fila in matriz]
         lcolumna.append(x)
     lsuma=[]
-    for i in range(len(lcolumna)):
+    for i in range(len(lcolumna)): # para la suma he usado la función sum(), es mucho más rápido
         y=sum(lcolumna[i])
-        lsuma.append(y)
+        lsuma.append(y)             #sumo cada columna y el resultado lo meto en una lista que imprimo
     print("La suma de cada columan es: ",lsuma)
 
 
@@ -44,9 +45,3 @@ numero=int(input("dame un numero: "))
 generar_matriz(numero)
 suma_filas(numero)
 suma_columna(numero)
-
-
-
-
-def suma_columnas():
-    pass
