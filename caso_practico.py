@@ -15,12 +15,38 @@ def generar_matriz(n):
     for fila in matriz:
         print(fila)
 
+def suma_filas(n): #funcion suma listas y columnas, sin usar funcion sum(), ni tolist()
+    x=0
+    lfila=[]
+    sfila=0
+    while x<=(n-1):
+        for i in range(len(matriz[x])):
+            sfila+=matriz[x][i]
+        lfila.append(sfila)            
+        x+=1
+        sfila=0
+    print("La suma de cada fila es: ",lfila)
+
+def suma_columna(numero):
+    lcolumna=[]
+    for i in range(len(matriz)):
+        x=[fila[i] for fila in matriz]
+        lcolumna.append(x)
+    lsuma=[]
+    for i in range(len(lcolumna)):
+        y=sum(lcolumna[i])
+        lsuma.append(y)
+    print("La suma de cada columan es: ",lsuma)
+
+
 #pido al usuario que me de el número para generar la matriz de nxn, y llamo a la función para crear e imprimir la matriz
 numero=int(input("dame un numero: "))
 generar_matriz(numero)
+suma_filas(numero)
+suma_columna(numero)
 
-def suma_filas():
-    pass
+
+
 
 def suma_columnas():
     pass
