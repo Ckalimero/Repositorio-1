@@ -40,8 +40,13 @@ def suma_columna(numero):
     print("La suma de cada columan es: ",lsuma)
 
 
-#pido al usuario que me de el número para generar la matriz de nxn, y llamo a la función para crear e imprimir la matriz
-numero=int(input("dame un numero: "))
+#pido al usuario que me de el nº para generar la matriz.Uso una excepción para validar que el nº sea entero
+while True:
+    try:
+        numero=int(input("dame un numero: "))
+        break
+    except ValueError:
+        print("Es necesario un numero entero, sin decimales por favor: ")
 generar_matriz(numero)
 suma_filas(numero)
 suma_columna(numero)
