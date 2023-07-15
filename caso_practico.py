@@ -13,7 +13,7 @@ def generar_matriz(n):
             lista.append(aleatorio())
         matriz.append(lista)
     for fila in matriz:
-        print(fila)
+        print(f"********* {fila} **********")
 
 def suma_filas(n): #funcion suma listas y columnas, sin usar funcion sum(), ni tolist()
     x=0
@@ -25,7 +25,7 @@ def suma_filas(n): #funcion suma listas y columnas, sin usar funcion sum(), ni t
         lfila.append(sfila)            #la añado a una lista que luego imprimo
         x+=1
         sfila=0
-    print("La suma de cada fila es: ",lfila)
+    print("\nLa suma de cada fila es: ",lfila)
 
 # funcion que extrae columnas con una lista por comprensión, las mete en otra lista y luego las suma e imprime
 def suma_columna(numero):
@@ -37,16 +37,27 @@ def suma_columna(numero):
     for i in range(len(lcolumna)): # para la suma he usado la función sum(), es mucho más rápido
         y=sum(lcolumna[i])
         lsuma.append(y)             #sumo cada columna y el resultado lo meto en una lista que imprimo
-    print("La suma de cada columan es: ",lsuma)
+    print("\nLa suma de cada columan es: ",lsuma)
+
+print("***************************************************")
+print("***************************************************")
+print("********* - SU MATRIZ CUADRADA A MEDIDA - *********")
+print("***************************************************")
+print("***************************************************\n")
 
 
 #pido al usuario que me de el nº para generar la matriz.Uso una excepción para validar que el nº sea entero
+# positivo y mayor que cero
 while True:
     try:
-        numero=int(input("dame un numero: "))
+        numero=int(input("Introduzca un Número Entero Positivo: "))
+        print("\n")
+        if numero <= 0:
+            continue
         break
     except ValueError:
         print("Es necesario un numero entero, sin decimales por favor: ")
+
 generar_matriz(numero)
 suma_filas(numero)
 suma_columna(numero)
