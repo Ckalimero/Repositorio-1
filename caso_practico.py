@@ -13,7 +13,7 @@ def generar_matriz(n):
             lista.append(aleatorio())
         matriz.append(lista)
     for fila in matriz:
-        print(f"********* {fila} **********")
+        print(f"******* {'  '.join(map(str,fila))} ********") #desempaqueto e imprimo para quitar corchetes
 
 def suma_filas(n): #funcion suma listas y columnas, sin usar funcion sum(), ni tolist()
     x=0
@@ -37,7 +37,7 @@ def suma_columna(numero):
     for i in range(len(lcolumna)): # para la suma he usado la función sum(), es mucho más rápido
         y=sum(lcolumna[i])
         lsuma.append(y)             #sumo cada columna y el resultado lo meto en una lista que imprimo
-    print("\nLa suma de cada columan es: ",lsuma)
+    print("\nLa suma de cada columan es: ",lsuma,"\n")
 
 print("***************************************************")
 print("***************************************************")
