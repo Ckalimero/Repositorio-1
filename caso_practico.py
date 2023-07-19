@@ -14,7 +14,8 @@ def generar_matriz(n):
         matriz.append(lista)
     for fila in matriz:
         print(f"******* {'  '.join(map(str,fila))} ********") #desempaqueto e imprimo para quitar corchetes
-
+    return matriz
+    
 def suma_filas(n): #funcion suma listas y columnas, sin usar funcion sum(), ni tolist()
     x=0
     lfila=[]
@@ -29,6 +30,7 @@ def suma_filas(n): #funcion suma listas y columnas, sin usar funcion sum(), ni t
 
 # funcion que extrae columnas con una lista por comprensión, las mete en otra lista y luego las suma e imprime
 def suma_columna(numero):
+    
     lcolumna=[]
     for i in range(len(matriz)):
         x=[fila[i] for fila in matriz]
