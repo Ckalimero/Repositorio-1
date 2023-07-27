@@ -53,3 +53,4 @@ if __name__ == '__main__':
     matriz.imprimir_matriz()
     matriz.suma_filas()
     matriz.suma_columnas()
+    input("\nPresiona Enter para salir...")

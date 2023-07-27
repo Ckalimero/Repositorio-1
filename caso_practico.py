@@ -41,25 +41,26 @@ def suma_columna(numero):
         lsuma.append(y)             #sumo cada columna y el resultado lo meto en una lista que imprimo
     print("\nLa suma de cada columan es: ",lsuma,"\n")
 
-print("***************************************************")
-print("***************************************************")
-print("********* - SU MATRIZ CUADRADA A MEDIDA - *********")
-print("***************************************************")
-print("***************************************************\n")
+if __name__=="__main__":
+
+    print("***************************************************")
+    print("***************************************************")
+    print("********* - SU MATRIZ CUADRADA A MEDIDA - *********")
+    print("***************************************************")
+    print("***************************************************\n")
 
 
 #pido al usuario que me de el nº para generar la matriz.Uso una excepción para validar que el nº sea entero
 # positivo y mayor que cero
-while True:
-    try:
-        numero=int(input("Introduzca un Número Entero Positivo: "))
-        print("\n")
-        if numero <= 0:
-            continue
-        break
-    except ValueError:
-        print("Es necesario un numero entero, sin decimales por favor: ")
+    while True:
+        try:
+            numero=int(input("Introduzca un Número Entero Positivo: "))
+            if numero <= 0:
+                continue
+            break
+        except ValueError:
+            print("Es necesario un numero entero, sin decimales por favor: ")
 
-generar_matriz(numero)
-suma_filas(numero)
-suma_columna(numero)
+    generar_matriz(numero)
+    suma_filas(numero)
+    suma_columna(numero)
